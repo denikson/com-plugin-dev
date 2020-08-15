@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - COM Code Modding</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">1.</strong> Baby's first plugin</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">1.1.</strong> Installing tools</li><li class="chapter-item expanded "><strong aria-hidden="true">1.2.</strong> Setting up project</li><li class="chapter-item expanded "><strong aria-hidden="true">1.3.</strong> Logging</li><li class="chapter-item expanded "><strong aria-hidden="true">1.4.</strong> Configuration</li><li class="chapter-item expanded "><strong aria-hidden="true">1.5.</strong> Releasing plugins</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Game code manipulation</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">2.1.</strong> Using dnSpy</li><li class="chapter-item expanded "><strong aria-hidden="true">2.2.</strong> Basics of Harmony</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> IL</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">3.1.</strong> How your C# code gets run</li><li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong> Writing Harmony transpilers</li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">COM Code Modding</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<h2><a class="header" href="#foreword" id="foreword">Foreword</a></h2>
+<p>Greetings!</p>
+<p>This book is a miniature introduction into modding Custom Order Maid 3D 2 -- a game by 
+KISS where you play as a maid parlor owner. While the gameplay is somewhat repetitive 
+and heavily story-based, it has a massive modding potential owing to the game's maid
+editor and Photo Mode.</p>
+<p>Custom Maid 3D 2 was the first game that got me serious into Unity modding back in 2015. I was captivated
+by how simple it is to view game's code and edit it to fit my own needs. One of 
+my very first plugins was <a href="https://github.com/denikson/CM3D2.MaidFiddler">Maid Fiddler</a> which 
+was a live value editor. To make such a tool, I started from the ground up and had to learn 
+how to decompile and read the game's code, get grasp of writing IL patchers to inject my 
+code into the game and jump hoops around Unity's own quirks. It was a daunting task, 
+yet a great introduction into more general Unity modding. Later on I went ahead to apply the 
+gained knowledge to such adventures as</p>
+<ul>
+<li>writing <a href="https://github.com/denikson/Mono.Cecil.Inject">Mono.Cecil.Inject</a> which makes code injection
+easier with the tools used in CM3D2 modding;</li>
+<li>writing <a href="http://umaiumeunion.github.io/guides_unityinjector/01_preface">the first comprehensive guide on CM3D2 plugin development</a>
+and <a href="http://umaiumeunion.github.io/guides_reipatcher/08_guideline_php_pcp_architecture">document the three-DLL patching architecture</a> that is still used in many COM3D2 plugins to date;</li>
+<li>making <a href="https://github.com/NeighTools/UnityDoorstop">UnityDoorstop</a> which allows to inject custom 
+code into any Unity game;</li>
+<li>helping as a developer for <a href="https://github.com/BepInEx">BepInEx</a> -- a general-purpose Unity modding framework;</li>
+<li>maintaining <a href="https://bepinex.github.io/bepinex_docs/master/articles/index.html">BepInEx Docs</a> which accumulates 
+various information on developing Unity plugins.</li>
+</ul>
+<p>In this book I hope to share the experience I've gained over the course of 5 years modding Unity games to bring 
+a basic introductory guide into COM3D2 modding. </p>
+<p>Back when I started modding, documentation was scarce. I hope that this book will be of benefit to anyone who wants to write 
+plugins for COM3D2 or any other Unity game.</p>
+<p>-- Geoffrey Horsington &lt;<a href="mailto:neigh@coder.horse">neigh@coder.horse</a>&gt;</p>
+<h2><a class="header" href="#what-you-will-learn-in-this-book" id="what-you-will-learn-in-this-book">What you will learn in this book</a></h2>
+<p>The book is intended as an introductory document into plugin development of COM3D2. 
+While the contents are tailored for COM3D2, you can use the same concepts to mod almost any Unity game.</p>
+<blockquote>
+<p>Note: This book does not cover making models, textures or any other COM3D2 modding that is not related
+to programming aspects. For more information on this, I suggest checking out <a href="https://docs.google.com/document/d/1ynhUG_JwypWVQejG_p7DfHfGhAnioQKnhf21K_jMNaQ"><em>Amateur’s Modding Guide To COM</em></a>.</p>
+</blockquote>
+<p>This book covers the following topics:</p>
+<ol>
+<li>The core basics of writing a plugin</li>
+<li>Basics of reverse engineering the game with dnSpy</li>
+<li>Using runtime patching to edit game's basic behavior</li>
+<li>Understanding the basics of Common Intermediate Language</li>
+<li>Advanced manipulation of game behavior by editing game's code</li>
+</ol>
+<p>The topics are ordered by the difficulty level. After reading the book, you will by no means be the modding master, but
+you certainly will have the knowledge to create the next great thing in COM modding!</p>
+<h2><a class="header" href="#what-you-should-know-before-reading-this-book" id="what-you-should-know-before-reading-this-book">What you should know before reading this book</a></h2>
+<p>All the guides contained within here were made with little required background knowledge in Unity or Unity modding.<br />
+<em>Only basic understanding of programming is required for this book.</em>
+Nevertheless, the following material will make it much easier to understand the panoply of topics covered here:</p>
+<ul>
+<li>Knowledge of programming in C#: <a href="https://dotnetcademy.net/CSharp/Beginner">.NET Academy</a> is a good public source</li>
+<li>Understanding of Reflection API in .NET: <a href="https://dotnetcademy.net/Learn/4/Pages/1">.NET Academy</a></li>
+<li>Understanding of Unity: <a href="https://learn.unity.com/course/create-with-code">Create with Code</a> course will give extensive knowledge; even more than needed in this guide</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
