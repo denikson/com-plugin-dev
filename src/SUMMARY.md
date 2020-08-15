@@ -1,0 +1,16 @@
+# Summary
+
+[Introduction](./introduction.md)
+
+- [Baby's first plugin]()
+    - [Installing tools]()
+    - [Setting up project]()
+    - [Logging]()
+    - [Configuration]()
+    - [Releasing plugins]()
+- [Game code manipulation]()
+    - [Using dnSpy]()
+    - [Basics of Harmony]()
+- [IL]()
+    - [How your C# code gets run]()
+    - [Writing Harmony transpilers]()
