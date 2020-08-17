@@ -4,3 +4,8 @@ language = "en"
 multilingual = false
 src = "src"
 title = "COM Code Modding"
+
+[output.html]
+site-url = "/com-plugin-dev/"
+git-repository-url = "https://github.com/denikson/com-plugin-dev"
+curly-quotes = true
