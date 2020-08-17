@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">1.</strong> Baby's first plugin</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">1.1.</strong> Installing tools</li><li class="chapter-item expanded "><strong aria-hidden="true">1.2.</strong> Setting up project</li><li class="chapter-item expanded "><strong aria-hidden="true">1.3.</strong> Logging</li><li class="chapter-item expanded "><strong aria-hidden="true">1.4.</strong> Configuration</li><li class="chapter-item expanded "><strong aria-hidden="true">1.5.</strong> Releasing plugins</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Game code manipulation</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">2.1.</strong> Using dnSpy</li><li class="chapter-item expanded "><strong aria-hidden="true">2.2.</strong> Basics of Harmony</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> IL</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">3.1.</strong> How your C# code gets run</li><li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong> Writing Harmony transpilers</li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapters/1_plugin_basics/intro.html"><strong aria-hidden="true">1.</strong> Baby's first plugin</a></li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">1.1.</strong> Installing tools</li><li class="chapter-item expanded "><strong aria-hidden="true">1.2.</strong> Setting up project</li><li class="chapter-item expanded "><strong aria-hidden="true">1.3.</strong> Logging</li><li class="chapter-item expanded "><strong aria-hidden="true">1.4.</strong> Configuration</li><li class="chapter-item expanded "><strong aria-hidden="true">1.5.</strong> Releasing plugins</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Game code manipulation</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">2.1.</strong> Using dnSpy</li><li class="chapter-item expanded "><strong aria-hidden="true">2.2.</strong> Basics of Harmony</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> IL</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">3.1.</strong> How your C# code gets run</li><li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong> Writing Harmony transpilers</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> MonoMod</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">4.1.</strong> Basic setup</li><li class="chapter-item expanded "><strong aria-hidden="true">4.2.</strong> Making a simple patcher</li></ol></li><li class="chapter-item expanded "><a href="appendix/history.html">Brief history into Unity modding</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -132,6 +132,10 @@
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
+                        <a href="https://github.com/denikson/com-plugin-dev" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -164,14 +168,14 @@
 <p>Greetings!</p>
 <p>This book is a miniature introduction into modding Custom Order Maid 3D 2 -- a game by 
 KISS where you play as a maid parlor owner. While the gameplay is somewhat repetitive 
-and heavily story-based, it has a massive modding potential owing to the game's maid
+and heavily story-based, it has a massive modding potential owing to the game’s maid
 editor and Photo Mode.</p>
 <p>Custom Maid 3D 2 was the first game that got me serious into Unity modding back in 2015. I was captivated
-by how simple it is to view game's code and edit it to fit my own needs. One of 
+by how simple it is to view game’s code and edit it to fit my own needs. One of 
 my very first plugins was <a href="https://github.com/denikson/CM3D2.MaidFiddler">Maid Fiddler</a> which 
 was a live value editor. To make such a tool, I started from the ground up and had to learn 
-how to decompile and read the game's code, get grasp of writing IL patchers to inject my 
-code into the game and jump hoops around Unity's own quirks. It was a daunting task, 
+how to decompile and read the game’s code, get grasp of writing IL patchers to inject my 
+code into the game and jump hoops around Unity’s own quirks. It was a daunting task, 
 yet a great introduction into more general Unity modding. Later on I went ahead to apply the 
 gained knowledge to such adventures as</p>
 <ul>
@@ -185,7 +189,7 @@ code into any Unity game;</li>
 <li>maintaining <a href="https://bepinex.github.io/bepinex_docs/master/articles/index.html">BepInEx Docs</a> which accumulates 
 various information on developing Unity plugins.</li>
 </ul>
-<p>In this book I hope to share the experience I've gained over the course of 5 years modding Unity games to bring 
+<p>In this book I hope to share the experience I’ve gained over the course of 5 years modding Unity games to bring 
 a basic introductory guide into COM3D2 modding. </p>
 <p>Back when I started modding, documentation was scarce. I hope that this book will be of benefit to anyone who wants to write 
 plugins for COM3D2 or any other Unity game.</p>
@@ -201,9 +205,9 @@ to programming aspects. For more information on this, I suggest checking out <a 
 <ol>
 <li>The core basics of writing a plugin</li>
 <li>Basics of reverse engineering the game with dnSpy</li>
-<li>Using runtime patching to edit game's basic behavior</li>
+<li>Using runtime patching to edit game’s basic behavior</li>
 <li>Understanding the basics of Common Intermediate Language</li>
-<li>Advanced manipulation of game behavior by editing game's code</li>
+<li>Advanced manipulation of game behavior by editing game’s code</li>
 </ol>
 <p>The topics are ordered by the difficulty level. After reading the book, you will by no means be the modding master, but
 you certainly will have the knowledge to create the next great thing in COM modding!</p>
@@ -224,6 +228,10 @@ Nevertheless, the following material will make it much easier to understand the 
                         
 
                         
+                            <a rel="next" href="chapters/1_plugin_basics/intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -233,6 +241,10 @@ Nevertheless, the following material will make it much easier to understand the 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
 
+                
+                    <a rel="next" href="chapters/1_plugin_basics/intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 

@@ -3,9 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>COM Code Modding</title>
-        
-        <meta name="robots" content="noindex" />
+        <title>Brief history into Unity modding - COM Code Modding</title>
         
         
 
@@ -20,26 +18,26 @@
         <meta name="theme-color" content="#ffffff" />
 
         
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../favicon.svg">
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -49,7 +47,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -95,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapters/1_plugin_basics/intro.html"><strong aria-hidden="true">1.</strong> Baby's first plugin</a></li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">1.1.</strong> Installing tools</li><li class="chapter-item expanded "><strong aria-hidden="true">1.2.</strong> Setting up project</li><li class="chapter-item expanded "><strong aria-hidden="true">1.3.</strong> Logging</li><li class="chapter-item expanded "><strong aria-hidden="true">1.4.</strong> Configuration</li><li class="chapter-item expanded "><strong aria-hidden="true">1.5.</strong> Releasing plugins</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Game code manipulation</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">2.1.</strong> Using dnSpy</li><li class="chapter-item expanded "><strong aria-hidden="true">2.2.</strong> Basics of Harmony</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> IL</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">3.1.</strong> How your C# code gets run</li><li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong> Writing Harmony transpilers</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> MonoMod</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">4.1.</strong> Basic setup</li><li class="chapter-item expanded "><strong aria-hidden="true">4.2.</strong> Making a simple patcher</li></ol></li><li class="chapter-item expanded "><a href="appendix/history.html">Brief history into Unity modding</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="../chapters/1_plugin_basics/intro.html"><strong aria-hidden="true">1.</strong> Baby's first plugin</a></li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">1.1.</strong> Installing tools</li><li class="chapter-item expanded "><strong aria-hidden="true">1.2.</strong> Setting up project</li><li class="chapter-item expanded "><strong aria-hidden="true">1.3.</strong> Logging</li><li class="chapter-item expanded "><strong aria-hidden="true">1.4.</strong> Configuration</li><li class="chapter-item expanded "><strong aria-hidden="true">1.5.</strong> Releasing plugins</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Game code manipulation</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">2.1.</strong> Using dnSpy</li><li class="chapter-item expanded "><strong aria-hidden="true">2.2.</strong> Basics of Harmony</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> IL</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">3.1.</strong> How your C# code gets run</li><li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong> Writing Harmony transpilers</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> MonoMod</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">4.1.</strong> Basic setup</li><li class="chapter-item expanded "><strong aria-hidden="true">4.2.</strong> Making a simple patcher</li></ol></li><li class="chapter-item expanded "><a href="../appendix/history.html" class="active">Brief history into Unity modding</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -130,7 +128,7 @@
                     <h1 class="menu-title">COM Code Modding</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
@@ -165,86 +163,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
-<h2><a class="header" href="#foreword" id="foreword">Foreword</a></h2>
-<p>Greetings!</p>
-<p>This book is a miniature introduction into modding Custom Order Maid 3D 2 -- a game by 
-KISS where you play as a maid parlor owner. While the gameplay is somewhat repetitive 
-and heavily story-based, it has a massive modding potential owing to the game’s maid
-editor and Photo Mode.</p>
-<p>Custom Maid 3D 2 was the first game that got me serious into Unity modding back in 2015. I was captivated
-by how simple it is to view game’s code and edit it to fit my own needs. One of 
-my very first plugins was <a href="https://github.com/denikson/CM3D2.MaidFiddler">Maid Fiddler</a> which 
-was a live value editor. To make such a tool, I started from the ground up and had to learn 
-how to decompile and read the game’s code, get grasp of writing IL patchers to inject my 
-code into the game and jump hoops around Unity’s own quirks. It was a daunting task, 
-yet a great introduction into more general Unity modding. Later on I went ahead to apply the 
-gained knowledge to such adventures as</p>
-<ul>
-<li>writing <a href="https://github.com/denikson/Mono.Cecil.Inject">Mono.Cecil.Inject</a> which makes code injection
-easier with the tools used in CM3D2 modding;</li>
-<li>writing <a href="http://umaiumeunion.github.io/guides_unityinjector/01_preface">the first comprehensive guide on CM3D2 plugin development</a>
-and <a href="http://umaiumeunion.github.io/guides_reipatcher/08_guideline_php_pcp_architecture">document the three-DLL patching architecture</a> that is still used in many COM3D2 plugins to date;</li>
-<li>making <a href="https://github.com/NeighTools/UnityDoorstop">UnityDoorstop</a> which allows to inject custom 
-code into any Unity game;</li>
-<li>helping as a developer for <a href="https://github.com/BepInEx">BepInEx</a> -- a general-purpose Unity modding framework;</li>
-<li>maintaining <a href="https://bepinex.github.io/bepinex_docs/master/articles/index.html">BepInEx Docs</a> which accumulates 
-various information on developing Unity plugins.</li>
-</ul>
-<p>In this book I hope to share the experience I’ve gained over the course of 5 years modding Unity games to bring 
-a basic introductory guide into COM3D2 modding. </p>
-<p>Back when I started modding, documentation was scarce. I hope that this book will be of benefit to anyone who wants to write 
-plugins for COM3D2 or any other Unity game.</p>
-<p>-- Geoffrey Horsington &lt;<a href="mailto:neigh@coder.horse">neigh@coder.horse</a>&gt;</p>
-<h2><a class="header" href="#what-you-will-learn-in-this-book" id="what-you-will-learn-in-this-book">What you will learn in this book</a></h2>
-<p>The book is intended as an introductory document into plugin development of COM3D2. 
-While the contents are tailored for COM3D2, you can use the same concepts to mod almost any Unity game.</p>
-<blockquote>
-<p>Note: This book does not cover making models, textures or any other COM3D2 modding that is not related
-to programming aspects. For more information on this, I suggest checking out <a href="https://docs.google.com/document/d/1ynhUG_JwypWVQejG_p7DfHfGhAnioQKnhf21K_jMNaQ"><em>Amateur’s Modding Guide To COM</em></a>.</p>
-</blockquote>
-<p>This book covers the following topics:</p>
-<ol>
-<li>The core basics of writing a plugin</li>
-<li>Basics of reverse engineering the game with dnSpy</li>
-<li>Using runtime patching to edit game’s basic behavior</li>
-<li>Understanding the basics of Common Intermediate Language</li>
-<li>Advanced manipulation of game behavior by editing game’s code</li>
-</ol>
-<p>The topics are ordered by the difficulty level. After reading the book, you will by no means be the modding master, but
-you certainly will have the knowledge to create the next great thing in COM modding!</p>
-<h2><a class="header" href="#what-you-should-know-before-reading-this-book" id="what-you-should-know-before-reading-this-book">What you should know before reading this book</a></h2>
-<p>All the guides contained within here were made with little required background knowledge in Unity or Unity modding.<br />
-<em>Only basic understanding of programming is required for this book.</em>
-Nevertheless, the following material will make it much easier to understand the panoply of topics covered here:</p>
-<ul>
-<li>Knowledge of programming in C#: <a href="https://dotnetcademy.net/CSharp/Beginner">.NET Academy</a> is a good public source</li>
-<li>Understanding of Reflection API in .NET: <a href="https://dotnetcademy.net/Learn/4/Pages/1">.NET Academy</a></li>
-<li>Understanding of Unity: <a href="https://learn.unity.com/course/create-with-code">Create with Code</a> course will give extensive knowledge; even more than needed in this guide</li>
-</ul>
-<h1><a class="header" href="#preface" id="preface">Preface</a></h1>
-<p>The most basic parts of modding COM’s code is executing custom code inside the
-game. 
-The ability to run any logic directly in game opens a glut of possibilities to
-manipulate or add behavior to the game.</p>
-<p>Over time there have been various means of injecting custom user code into the 
-game. The currently suggested way to do so is by writing plugins using 
-<a href="https://github.com/BepInEx/BepInEx">BepInEx</a> — a generic cross-platform 
-Unity modding framework.</p>
-<blockquote>
-<p>For the interested, I suggest taking a look at
-<a href="chapters/1_plugin_basics//appendix/history.html">Unity code modding history</a> for information about 
-other modding tools.</p>
-</blockquote>
-<p>In this chapter, you will</p>
-<ul>
-<li>install <a href="https://github.com/BepInEx/BepInEx">BepInEx</a> and <a href="https://visualstudio.microsoft.com/">Visual Studio</a>;</li>
-<li>create and set up a BepInEx plugin project for COM3D2;</li>
-<li>Write a simple plugin which writes logs, uses configuration files and changes
-game’s behavior by calling some of the game’s own code; and</li>
-<li>learn about good practices related to packaging plugins for release.</li>
-</ul>
-<h1><a class="header" href="#a-brief-history-lesson-on-custom-code-execution" id="a-brief-history-lesson-on-custom-code-execution">A brief history lesson on custom code execution</a></h1>
+                        <h1><a class="header" href="#a-brief-history-lesson-on-custom-code-execution" id="a-brief-history-lesson-on-custom-code-execution">A brief history lesson on custom code execution</a></h1>
 <blockquote>
 <p>Note: This section is not mandatory but might prove interesting
 in terms of Unity modding history.</p>
@@ -277,11 +196,11 @@ patching easier were developed. Most notably</p>
 <li><a href="https://github.com/MonoMod/MonoMod">MonoMod</a> — allows to write assembly
 patchers without touching any of Cecil. It is still very useful in some
 cases. In fact it’s still useful in modern loaders, refer to
-<a href="appendix//chapters/4_monomod/intro.html">Chapter 4</a> for the guide.</li>
+<a href="/chapters/4_monomod/intro.html">Chapter 4</a> for the guide.</li>
 <li><a href="https://github.com/0xd4d/dnSpy">dnSpy</a> — tool to view and inspect .NET
 assemblies. Allows to edit assemblies using C# directly, which lowered 
 the entry bar for modding significantly (even though it is still
-hardpatching). We will dive into dnSpy in <a href="appendix//chapters/2_patching_basics/1_dnspy.html">Chapter 2.1</a>.</li>
+hardpatching). We will dive into dnSpy in <a href="/chapters/2_patching_basics/1_dnspy.html">Chapter 2.1</a>.</li>
 </ul>
 <p>An important turning point for CM3D2 modding was introduction of Sybaris.<br />
 Sybaris was a single DLL file that required only a drop-in installation into 
@@ -318,6 +237,10 @@ BepInEx also includes a panoply of helper libraries such as</p>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="../chapters/1_plugin_basics/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
 
@@ -327,6 +250,10 @@ BepInEx also includes a panoply of helper libraries such as</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../chapters/1_plugin_basics/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
 
                 
@@ -349,26 +276,18 @@ BepInEx also includes a panoply of helper libraries such as</p>
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-        
         
 
     </body>
