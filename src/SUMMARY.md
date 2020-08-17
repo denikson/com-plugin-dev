@@ -1,8 +1,8 @@
 # Summary
 
-[Introduction](./introduction.md)
+[Introduction](introduction.md)
 
-- [Baby's first plugin](./chapters/1_plugin_basics/intro.md)
+- [Baby's first plugin](chapters/1_plugin_basics/intro.md)
     - [Installing tools]()
     - [Setting up project]()
     - [Logging]()
@@ -18,4 +18,4 @@
     - [Basic setup]()
     - [Making a simple patcher]()
 
-[Brief history into Unity modding](./appendix/history.md)
+[Brief history into Unity modding](appendix/history.md)

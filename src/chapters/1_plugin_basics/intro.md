@@ -11,7 +11,7 @@ game. The currently suggested way to do so is by writing plugins using
 Unity modding framework.
 
 > For the interested, I suggest taking a look at
-> [Unity code modding history](/appendix/history.md) for information about 
+> [Unity code modding history](../../appendix/history.md) for information about 
 > other modding tools.
 
 In this chapter, you will

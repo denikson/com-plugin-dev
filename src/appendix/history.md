@@ -33,11 +33,11 @@ patching easier were developed. Most notably
 * [MonoMod](https://github.com/MonoMod/MonoMod) — allows to write assembly
    patchers without touching any of Cecil. It is still very useful in some
    cases. In fact it's still useful in modern loaders, refer to
-   [Chapter 4](/chapters/4_monomod/intro.md) for the guide.
+   [Chapter 4](../chapters/4_monomod/intro.md) for the guide.
 * [dnSpy](https://github.com/0xd4d/dnSpy) — tool to view and inspect .NET
     assemblies. Allows to edit assemblies using C# directly, which lowered 
     the entry bar for modding significantly (even though it is still
-    hardpatching). We will dive into dnSpy in [Chapter 2.1](/chapters/2_patching_basics/1_dnspy.md).
+    hardpatching). We will dive into dnSpy in [Chapter 2.1](../chapters/2_patching_basics/1_dnspy.md).
 
 An important turning point for CM3D2 modding was introduction of Sybaris.  
 Sybaris was a single DLL file that required only a drop-in installation into 
